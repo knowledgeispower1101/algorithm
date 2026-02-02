@@ -13,7 +13,7 @@ public:
         for (int i = 0; i < s.size(); i++)
         {
             charArr[s[i] - 'a']++;
-            charArr[t[i] + 'a']--;
+            charArr[t[i] - 'a']--;
         }
         for (int i = 0; i < 26; i++)
         {
