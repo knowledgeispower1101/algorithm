@@ -27,5 +27,5 @@ int main()
 {
     vector<int> height = {1, 7, 2, 5, 12, 3, 500, 500, 7, 8, 4, 7, 3, 6};
     Solution sl;
-    cout << sl.maxArea(height) << endl;
+    cout << sl.maxArea(&height) << endl;
 }
