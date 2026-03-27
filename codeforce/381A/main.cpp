@@ -13,7 +13,7 @@ int main()
     }
 
     int sereja = 0, dima = 0;
-    bool turnSereja = true; // Sereja starts
+    bool turnSereja = true;
     int left = 0, right = n - 1;
 
     while (left <= right)
