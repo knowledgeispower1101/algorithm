@@ -1,29 +1,20 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
+
 int main()
 {
-    int n;
-    cin >> n;
-    for (int i = 0; i < n; i++)
+    int t;
+    cin >> t;
+    while (t--)
     {
         int a, b, c;
         cin >> a >> b >> c;
-        // cout << a << " " << b << " " << c << endl;
-        if ((a > b && a < c) || (a > c && a < b))
-        {
-            cout << a << endl;
-            continue;
-        }
-        if ((b > a && b < c) || (b > c && b < a))
-        {
-            cout << b << endl;
-            continue;
-        }
-        if ((c > a && c < b) || (c > b && c < a))
-        {
-            cout << c << endl;
-            continue;
-        }
+
+        // middle = sum - max - min
+        int middle = a + b + c - max({a, b, c}) - min({a, b, c});
+
+        cout << middle << endl;
     }
     return 0;
 }
