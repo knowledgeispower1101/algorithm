@@ -11,7 +11,6 @@ int main()
         int a, b, c;
         cin >> a >> b >> c;
 
-        // middle = sum - max - min
         int middle = a + b + c - max({a, b, c}) - min({a, b, c});
 
         cout << middle << endl;
