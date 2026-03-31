@@ -12,10 +12,6 @@ int main()
         cin >> x >> y >> n;
 
         long long j = x * floor((n - y) / x) + y;
-
-        if (j > n)
-            j -= x;
-
         cout << j << endl;
     }
 
