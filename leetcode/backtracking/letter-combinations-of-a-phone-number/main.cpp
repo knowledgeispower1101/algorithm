@@ -8,6 +8,8 @@ public:
     vector<string> letterCombinations(string digits)
     {
         vector<string> result;
+        if (digits.size() == 0)
+            return result;
         string current;
         buildString(digits, 0, result, current);
         return result;
