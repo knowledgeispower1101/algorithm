@@ -20,7 +20,6 @@ public:
             else if (c == 'R')
                 x++;
         }
-
         return x == 0 && y == 0;
     }
 };
