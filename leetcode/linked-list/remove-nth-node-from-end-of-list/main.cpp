@@ -6,19 +6,23 @@ class ListNode
 public:
     int val;
     ListNode *next;
+
     ListNode()
     {
-        this->val = 0;
-        this->next = nullptr;
+        val = 0;
+        next = nullptr;
     }
+
     ListNode(int value)
     {
-        this->val = val;
+        val = value;
+        next = nullptr;
     }
-    ListNode(int value, ListNode *next)
+
+    ListNode(int value, ListNode *nextNode)
     {
-        this->val = val;
-        this->next = next;
+        val = value;
+        next = nextNode;
     }
 };
 

@@ -5,20 +5,23 @@ class ListNode
 public:
     int val;
     ListNode *next;
-    ListNode(int val, ListNode *next)
-    {
-        this->next = next;
-        this->val = val;
-    }
+
     ListNode()
     {
-        this->next = nullptr;
-        this->val = 0;
+        val = 0;
+        next = nullptr;
     }
-    ListNode(int val)
+
+    ListNode(int value)
     {
-        this->val = val;
-        this->next = nullptr;
+        val = value;
+        next = nullptr;
+    }
+
+    ListNode(int value, ListNode *nextNode)
+    {
+        val = value;
+        next = nextNode;
     }
 };
 class Solution
