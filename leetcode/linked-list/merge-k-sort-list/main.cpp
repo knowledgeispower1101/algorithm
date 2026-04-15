@@ -26,7 +26,7 @@ class Solution
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists)
     {
-        if (lists.empty() == 0)
+        if (lists.empty())
             return nullptr;
         if (lists.size() == 1)
             return lists[0];
@@ -40,19 +40,19 @@ public:
 private:
     ListNode *merge(ListNode *nodeA, ListNode *nodeB)
     {
-        ListNode *dummyNode = new ListNode();
-        ListNode *current = dummyNode;
+        ListNode dummyNode;
+        ListNode *current = &dummyNode;
         while (nodeA != nullptr && nodeB != nullptr)
         {
-            if (nodeA->val >= nodeB->val)
+            if (nodeA->val <= nodeB->val)
             {
-                current->next = new ListNode(nodeB->val);
-                nodeB = nodeB->next;
+                current->next = nodeA;
+                nodeA = nodeA->next;
             }
             else
             {
-                current->next = new ListNode(nodeA->val);
-                nodeA = nodeA->next;
+                current->next = nodeB;
+                nodeB = nodeB->next;
             }
             current = current->next;
         }
@@ -62,7 +62,7 @@ private:
             return dummyNode->next;
         }
         current->next = nodeB;
-        return dummyNode->next;
+        return dummyNode.next;
     }
 };
 
